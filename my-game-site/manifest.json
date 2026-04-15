@@ -1,9 +1,0 @@
-﻿{
-  "name": "GameHub Premium",
-  "short_name": "GameHub",
-  "description": "Play trending and viral games online",
-  "start_url": "/index.html",
-  "display": "standalone",
-  "theme_color": "#0f172a",
-  "background_color": "#0a0f1c"
-}
