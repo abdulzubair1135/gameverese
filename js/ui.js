@@ -293,7 +293,12 @@ function updateFavCount() {
 
 function openGameWithAd(gameId) {
   showAdPopup(() => {
-    window.location.hash = `game-${gameId}`;
+   window.location.hash = `game-${gameId}`;
+
+// 🔥 FORCE render
+setTimeout(() => {
+  renderDetail(gameId);
+}, 100);
     renderDetail(gameId);
   });
 }
