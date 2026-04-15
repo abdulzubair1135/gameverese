@@ -274,7 +274,7 @@ if (installBtn) {
       const id = card.dataset.gameId;
       if (id) openGameWithAd(id);
     });
-  });
+  }); 
 }
 
 function showToast(message) {
@@ -295,10 +295,7 @@ function openGameWithAd(gameId) {
   showAdPopup(() => {
    window.location.hash = `game-${gameId}`;
 
-// 🔥 FORCE render
-setTimeout(() => {
-  renderDetail(gameId);
-}, 100);
+
     renderDetail(gameId);
   });
 }
