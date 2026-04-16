@@ -1,5 +1,62 @@
 ﻿/* ============ UI ENHANCEMENTS - GLASSMORPHISM, NEON, ANIMATIONS ============ */
+/* ============ MOBILE OPTIMIZATIONS ============ */
 
+/* Reduced motion for mobile */
+@media (max-width: 768px) {
+    .game-card,
+    .btn-primary,
+    .btn-secondary,
+    .scroll-btn,
+    .hero-banner::before {
+        animation-duration: 0.2s;
+    }
+    
+    .game-card:hover {
+        transform: translateY(-3px);
+    }
+    
+    /* Remove heavy animations on mobile */
+    .hero-banner::before {
+        animation: none;
+    }
+    
+    .gradient-text {
+        animation: none;
+    }
+    
+    .pulse {
+        animation: none;
+    }
+    
+    .float {
+        animation: none;
+    }
+}
+
+/* Safe area for notched phones */
+@supports (padding: max(0px)) {
+    .navbar {
+        padding-left: max(16px, env(safe-area-inset-left));
+        padding-right: max(16px, env(safe-area-inset-right));
+        padding-top: max(12px, env(safe-area-inset-top));
+    }
+    
+    .app-container {
+        padding-left: max(16px, env(safe-area-inset-left));
+        padding-right: max(16px, env(safe-area-inset-right));
+        padding-bottom: max(16px, env(safe-area-inset-bottom));
+    }
+    
+    .toast {
+        bottom: max(16px, env(safe-area-inset-bottom));
+        right: max(16px, env(safe-area-inset-right));
+    }
+    
+    .scroll-top {
+        bottom: max(16px, env(safe-area-inset-bottom));
+        right: max(16px, env(safe-area-inset-right));
+    }
+}
 /* Glassmorphism Card */
 .glass-card {
     background: rgba(255, 255, 255, 0.05);
