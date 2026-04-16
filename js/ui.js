@@ -406,7 +406,17 @@ function attachCardEvents() {
                 });
             }
         });
-        
+        // Add touch feedback for mobile
+if ('ontouchstart' in window) {
+    document.querySelectorAll('.game-card, .btn-primary, .btn-secondary, .scroll-btn').forEach(el => {
+        el.addEventListener('touchstart', function() {
+            this.style.transform = 'scale(0.98)';
+        });
+        el.addEventListener('touchend', function() {
+            this.style.transform = '';
+        });
+    });
+}
         newCard.addEventListener('click', (e) => {
             createRipple(e, newCard);
         });
