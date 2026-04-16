@@ -16,474 +16,9 @@
     --warning: #f59e0b;
     --info: #3b82f6;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
-    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
-    --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.4);
-}
-/* ============ MOBILE FRIENDLY STYLES ============ */
-
-/* Mobile First Approach - Default for mobile */
-@media (max-width: 768px) {
-    /* Navbar - Stack vertically */
-    .navbar {
-        flex-direction: column;
-        padding: 12px 16px;
-        gap: 12px;
-    }
-    
-    .logo {
-        justify-content: center;
-    }
-    
-    .logo-icon {
-        font-size: 24px;
-    }
-    
-    .logo-text {
-        font-size: 20px;
-    }
-    
-    .nav-controls {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-    
-    #searchInput {
-        width: 100%;
-        max-width: 280px;
-    }
-    
-    #searchInput:focus {
-        width: 100%;
-    }
-    
-    select, .icon-btn {
-        padding: 6px 12px;
-        font-size: 12px;
-    }
-    
-    /* App Container */
-    .app-container {
-        padding: 16px;
-    }
-    
-    /* Hero Banner */
-    .hero-banner {
-        padding: 30px 20px;
-        margin-bottom: 30px;
-    }
-    
-    .hero-title {
-        font-size: 28px;
-    }
-    
-    .hero-subtitle {
-        font-size: 14px;
-    }
-    
-    .hero-btn {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-    
-    /* Section Header */
-    .section-header {
-        margin: 25px 0 15px;
-    }
-    
-    .section-title {
-        font-size: 18px;
-    }
-    
-    .scroll-btn {
-        width: 30px;
-        height: 30px;
-        font-size: 12px;
-    }
-    
-    /* Scroll Row */
-    .scroll-row {
-        gap: 12px;
-        padding-bottom: 12px;
-    }
-    
-    .scroll-row .game-card {
-        min-width: 160px;
-    }
-    
-    /* Game Card */
-    .game-card {
-        border-radius: 12px;
-    }
-    
-    .card-media {
-        height: 110px;
-    }
-    
-    .card-content {
-        padding: 10px;
-    }
-    
-    .card-title {
-        font-size: 13px;
-    }
-    
-    .card-description {
-        font-size: 11px;
-        -webkit-line-clamp: 2;
-    }
-    
-    .card-stats {
-        font-size: 10px;
-        gap: 8px;
-    }
-    
-    .card-tags {
-        gap: 4px;
-    }
-    
-    .tag {
-        padding: 2px 6px;
-        font-size: 9px;
-    }
-    
-    .card-category-badge {
-        font-size: 9px;
-        padding: 3px 8px;
-        bottom: 8px;
-        left: 8px;
-    }
-    
-    .card-action-btn {
-        width: 28px;
-        height: 28px;
-        font-size: 12px;
-    }
-    
-    /* Games Grid */
-    .games-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 12px;
-    }
-    
-    /* Detail Page */
-    .detail-hero {
-        height: 35vh;
-        border-radius: 16px;
-    }
-    
-    .detail-overlay {
-        padding: 20px;
-    }
-    
-    .detail-overlay h1 {
-        font-size: 20px;
-    }
-    
-    .detail-actions {
-        gap: 10px;
-        margin-top: 12px;
-    }
-    
-    .btn-primary, .btn-secondary {
-        padding: 8px 16px;
-        font-size: 12px;
-    }
-    
-    .detail-stats {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-        padding: 16px;
-    }
-    
-    .stat-value {
-        font-size: 20px;
-    }
-    
-    .stat-label {
-        font-size: 10px;
-    }
-    
-    .detail-description h3 {
-        font-size: 16px;
-    }
-    
-    .detail-description p {
-        font-size: 13px;
-        line-height: 1.5;
-    }
-    
-    .detail-tags h3 {
-        font-size: 16px;
-    }
-    
-    /* Comments Section */
-    .comments-section {
-        padding: 16px;
-    }
-    
-    .comments-section h3 {
-        font-size: 16px;
-    }
-    
-    .comment-input-wrapper {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .comment-input {
-        width: 100%;
-    }
-    
-    .comment-author strong {
-        font-size: 12px;
-    }
-    
-    .comment-text {
-        font-size: 12px;
-    }
-    
-    .reply-btn, .like-comment-btn {
-        font-size: 11px;
-    }
-    
-    .reply-input-wrapper {
-        flex-direction: column;
-        gap: 8px;
-    }
-    
-    .reply-input {
-        width: 100%;
-    }
-    
-    /* Back Button */
-    .back-btn {
-        padding: 8px 16px;
-        font-size: 12px;
-        margin-bottom: 16px;
-    }
-    
-    /* Similar Games */
-    .similar-games h3 {
-        font-size: 16px;
-    }
-    
-    /* Toast */
-    .toast {
-        bottom: 16px;
-        right: 16px;
-        left: 16px;
-        padding: 10px 16px;
-        font-size: 12px;
-        text-align: center;
-    }
-    
-    /* Scroll Top Button */
-    .scroll-top {
-        width: 40px;
-        height: 40px;
-        bottom: 16px;
-        right: 16px;
-        font-size: 16px;
-    }
-    
-    /* Modal */
-    .modal-content {
-        padding: 24px;
-        width: 85%;
-    }
-    
-    .modal-content h3 {
-        font-size: 18px;
-    }
-    
-    .modal-content p {
-        font-size: 13px;
-    }
-    
-    /* Ad Cards */
-    .ad-card .card-title {
-        font-size: 12px;
-    }
-    
-    .btn-ad {
-        padding: 4px 10px;
-        font-size: 10px;
-    }
-    
-    /* Skeleton */
-    .skeleton-image {
-        height: 110px;
-    }
-    
-    .skeleton-text {
-        height: 10px;
-        margin: 8px;
-    }
 }
 
-/* Small Mobile (480px and below) */
-@media (max-width: 480px) {
-    .app-container {
-        padding: 12px;
-    }
-    
-    .hero-title {
-        font-size: 22px;
-    }
-    
-    .hero-subtitle {
-        font-size: 12px;
-    }
-    
-    .hero-btn {
-        padding: 8px 16px;
-        font-size: 12px;
-    }
-    
-    .section-title {
-        font-size: 16px;
-    }
-    
-    .games-grid {
-        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-        gap: 10px;
-    }
-    
-    .scroll-row .game-card {
-        min-width: 130px;
-    }
-    
-    .card-media {
-        height: 95px;
-    }
-    
-    .card-title {
-        font-size: 12px;
-    }
-    
-    .card-description {
-        font-size: 10px;
-    }
-    
-    .card-stats {
-        font-size: 9px;
-    }
-    
-    .detail-stats {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        padding: 12px;
-    }
-    
-    .stat-value {
-        font-size: 18px;
-    }
-    
-    .detail-overlay h1 {
-        font-size: 18px;
-    }
-    
-    .detail-actions {
-        flex-direction: column;
-    }
-    
-    .detail-actions .btn-primary,
-    .detail-actions .btn-secondary {
-        width: 100%;
-        text-align: center;
-    }
-    
-    .tag {
-        padding: 2px 5px;
-        font-size: 8px;
-    }
-}
-
-/* Landscape Mode for Mobile */
-@media (max-width: 768px) and (orientation: landscape) {
-    .hero-banner {
-        padding: 20px;
-    }
-    
-    .hero-title {
-        font-size: 24px;
-    }
-    
-    .detail-hero {
-        height: 45vh;
-    }
-    
-    .scroll-row .game-card {
-        min-width: 140px;
-    }
-    
-    .card-media {
-        height: 90px;
-    }
-}
-
-/* Touch-friendly improvements */
-@media (max-width: 768px) {
-    /* Increase touch targets */
-    button, 
-    .game-card,
-    .tag,
-    .scroll-btn,
-    .fav-btn,
-    .share-btn,
-    .reply-btn,
-    .like-comment-btn,
-    .submit-reply-btn {
-        cursor: pointer;
-        -webkit-tap-highlight-color: transparent;
-    }
-    
-    /* Remove hover effects on touch devices */
-    .game-card:hover {
-        transform: none;
-    }
-    
-    .game-card:active {
-        transform: scale(0.98);
-        transition: transform 0.1s;
-    }
-    
-    button:active,
-    .btn-primary:active,
-    .btn-secondary:active {
-        transform: scale(0.96);
-    }
-    
-    /* Better scrolling */
-    .scroll-row {
-        -webkit-overflow-scrolling: touch;
-        scroll-snap-type: x mandatory;
-    }
-    
-    .scroll-row .game-card {
-        scroll-snap-align: start;
-    }
-    
-    /* Better input for mobile */
-    input, select, textarea {
-        font-size: 16px; /* Prevents zoom on focus in iOS */
-    }
-    
-    /* Better modal on mobile */
-    .modal {
-        padding: 16px;
-    }
-    
-    .modal-content {
-        max-height: 90vh;
-        overflow-y: auto;
-    }
-}
-/* ============ LIGHT THEME ============ */
+/* Light Theme */
 body.light {
     --bg-primary: #f5f5f5;
     --bg-secondary: #ffffff;
@@ -493,11 +28,9 @@ body.light {
     --text-secondary: #666666;
     --text-muted: #999999;
     --border-color: rgba(0, 0, 0, 0.08);
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* ============ CYBERPUNK THEME ============ */
+/* Cyberpunk Theme */
 body.cyberpunk {
     --bg-primary: #000000;
     --bg-secondary: #0a0a0a;
@@ -508,25 +41,17 @@ body.cyberpunk {
     --text-muted: #008888;
     --accent-primary: #00ffff;
     --accent-secondary: #ff00ff;
-    --accent-glow: rgba(0, 255, 255, 0.2);
     --border-color: #00ffff;
-    --shadow-sm: 0 0 10px rgba(0, 255, 255, 0.2);
-    --shadow-md: 0 0 20px rgba(0, 255, 255, 0.3);
-    --shadow-lg: 0 0 40px rgba(0, 255, 255, 0.4);
 }
 
-    body.cyberpunk .game-card {
-        border: 1px solid #00ffff;
-        box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
-    }
+body.cyberpunk .game-card {
+    border: 1px solid #00ffff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
 
-        body.cyberpunk .game-card:hover {
-            box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
-        }
-
-    body.cyberpunk .btn-primary {
-        background: linear-gradient(135deg, #00ffff, #ff00ff);
-    }
+body.cyberpunk .btn-primary {
+    background: linear-gradient(135deg, #00ffff, #ff00ff);
+}
 
 /* ============ GLOBAL STYLES ============ */
 * {
@@ -546,6 +71,7 @@ body {
     transition: var(--transition);
     line-height: 1.5;
     overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* ============ SCROLLBAR ============ */
@@ -564,15 +90,9 @@ body {
     border-radius: 10px;
 }
 
-    ::-webkit-scrollbar-thumb:hover {
-        background: var(--accent-secondary);
-    }
-
-/* ============ INSPECT BLOCK ============ */
+/* ============ INSPECT BLOCK MESSAGE ============ */
 body {
     -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 
@@ -584,12 +104,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 40px;
-    background: rgba(var(--bg-primary-rgb, 10, 10, 10), 0.95);
+    padding: 12px 40px;
+    background: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-color);
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 12px;
 }
 
 .logo {
@@ -604,13 +124,8 @@ body {
 }
 
 @keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-3px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
 }
 
 .logo-text {
@@ -620,7 +135,6 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    letter-spacing: -0.5px;
 }
 
 .nav-controls {
@@ -645,11 +159,11 @@ body {
     transition: var(--transition);
 }
 
-    #searchInput:focus {
-        outline: none;
-        border-color: var(--accent-primary);
-        width: 280px;
-    }
+#searchInput:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    width: 280px;
+}
 
 .search-suggestions {
     position: absolute;
@@ -662,11 +176,13 @@ body {
     border: 1px solid var(--border-color);
     z-index: 100;
     display: none;
+    max-height: 200px;
+    overflow-y: auto;
 }
 
-    .search-suggestions.active {
-        display: block;
-    }
+.search-suggestions.active {
+    display: block;
+}
 
 .suggestion-item {
     padding: 10px 16px;
@@ -674,11 +190,11 @@ body {
     transition: var(--transition);
 }
 
-    .suggestion-item:hover {
-        background: var(--bg-hover);
-    }
+.suggestion-item:hover {
+    background: var(--bg-hover);
+}
 
-select, .icon-btn {
+select, .icon-btn, .theme-btn, .favorites-btn, .sort-select, .category-select {
     padding: 8px 16px;
     border-radius: 40px;
     border: 1px solid var(--border-color);
@@ -689,10 +205,10 @@ select, .icon-btn {
     transition: var(--transition);
 }
 
-    select:hover, .icon-btn:hover {
-        border-color: var(--accent-primary);
-        transform: scale(1.02);
-    }
+select:hover, .icon-btn:hover, .theme-btn:hover, .favorites-btn:hover {
+    border-color: var(--accent-primary);
+    transform: scale(1.02);
+}
 
 /* ============ PROGRESS BAR ============ */
 .progress-bar {
@@ -716,32 +232,27 @@ select, .icon-btn {
 .hero-banner {
     background: linear-gradient(135deg, #1a1a2e, #16213e);
     border-radius: 28px;
-    padding: 60px 50px;
-    margin-bottom: 50px;
+    padding: 50px 40px;
+    margin-bottom: 40px;
     text-align: center;
     position: relative;
     overflow: hidden;
 }
 
-    .hero-banner::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: radial-gradient(circle, var(--accent-glow), transparent);
-        animation: rotate 25s linear infinite;
-    }
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, var(--accent-glow), transparent);
+    animation: rotate 25s linear infinite;
+}
 
 @keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 .hero-content {
@@ -750,20 +261,19 @@ select, .icon-btn {
 }
 
 .hero-title {
-    font-size: 56px;
+    font-size: 48px;
     font-weight: 800;
     margin-bottom: 16px;
     background: linear-gradient(135deg, #ffffff, var(--accent-primary));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    letter-spacing: -1px;
 }
 
 .hero-subtitle {
     font-size: 18px;
     color: var(--text-secondary);
-    margin-bottom: 30px;
+    margin-bottom: 24px;
 }
 
 /* ============ SECTION HEADER ============ */
@@ -777,22 +287,21 @@ select, .icon-btn {
 .section-title {
     font-size: 24px;
     font-weight: 700;
-    letter-spacing: -0.5px;
     position: relative;
     padding-left: 16px;
 }
 
-    .section-title::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 4px;
-        height: 20px;
-        background: var(--accent-primary);
-        border-radius: 4px;
-    }
+.section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 20px;
+    background: var(--accent-primary);
+    border-radius: 4px;
+}
 
 .scroll-btns {
     display: flex;
@@ -810,10 +319,10 @@ select, .icon-btn {
     transition: var(--transition);
 }
 
-    .scroll-btn:hover {
-        background: var(--accent-primary);
-        transform: scale(1.05);
-    }
+.scroll-btn:hover {
+    background: var(--accent-primary);
+    transform: scale(1.05);
+}
 
 /* ============ SCROLL ROW (NETFLIX STYLE) ============ */
 .scroll-row {
@@ -824,14 +333,14 @@ select, .icon-btn {
     scroll-behavior: smooth;
 }
 
-    .scroll-row::-webkit-scrollbar {
-        display: none;
-    }
+.scroll-row::-webkit-scrollbar {
+    display: none;
+}
 
-    .scroll-row .game-card {
-        min-width: 260px;
-        flex-shrink: 0;
-    }
+.scroll-row .game-card {
+    min-width: 240px;
+    flex-shrink: 0;
+}
 
 /* ============ GAME CARD ============ */
 .game-card {
@@ -843,10 +352,10 @@ select, .icon-btn {
     border: 1px solid var(--border-color);
 }
 
-    .game-card:hover {
-        transform: translateY(-8px) scale(1.02);
-        box-shadow: var(--shadow-xl);
-    }
+.game-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-xl);
+}
 
 .card-media {
     position: relative;
@@ -903,10 +412,10 @@ select, .icon-btn {
     transition: var(--transition);
 }
 
-    .card-action-btn:hover {
-        background: var(--accent-primary);
-        transform: scale(1.1);
-    }
+.card-action-btn:hover {
+    background: var(--accent-primary);
+    transform: scale(1.1);
+}
 
 .card-content {
     padding: 14px;
@@ -939,11 +448,11 @@ select, .icon-btn {
     margin-bottom: 8px;
 }
 
-    .card-stats span {
-        display: flex;
-        align-items: center;
-        gap: 4px;
-    }
+.card-stats span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
 
 .card-tags {
     display: flex;
@@ -960,10 +469,10 @@ select, .icon-btn {
     transition: var(--transition);
 }
 
-    .tag:hover {
-        background: var(--accent-primary);
-        color: white;
-    }
+.tag:hover {
+    background: var(--accent-primary);
+    color: white;
+}
 
 /* ============ AD CARD ============ */
 .ad-card {
@@ -971,9 +480,9 @@ select, .icon-btn {
     border: 1px solid var(--accent-primary);
 }
 
-    .ad-card .card-title {
-        color: var(--accent-primary);
-    }
+.ad-card .card-title {
+    color: var(--accent-primary);
+}
 
 .ad-badge {
     position: absolute;
@@ -1000,9 +509,9 @@ select, .icon-btn {
     transition: var(--transition);
 }
 
-    .btn-ad:hover {
-        transform: scale(1.05);
-    }
+.btn-ad:hover {
+    transform: scale(1.05);
+}
 
 /* ============ GAMES GRID ============ */
 .games-grid {
@@ -1020,25 +529,25 @@ select, .icon-btn {
     margin-bottom: 32px;
 }
 
-    .detail-hero img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+.detail-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .detail-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 50px;
+    padding: 40px;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.95));
 }
 
-    .detail-overlay h1 {
-        font-size: 48px;
-        margin-bottom: 16px;
-    }
+.detail-overlay h1 {
+    font-size: 42px;
+    margin-bottom: 16px;
+}
 
 .detail-actions {
     display: flex;
@@ -1065,10 +574,10 @@ select, .icon-btn {
     border-radius: 16px;
 }
 
-    .stat-card:hover {
-        background: var(--bg-hover);
-        transform: translateY(-3px);
-    }
+.stat-card:hover {
+    background: var(--bg-hover);
+    transform: translateY(-3px);
+}
 
 .stat-value {
     font-size: 28px;
@@ -1086,14 +595,15 @@ select, .icon-btn {
     margin-bottom: 32px;
 }
 
-    .detail-description h3 {
-        margin-bottom: 12px;
-    }
+.detail-description h3 {
+    margin-bottom: 12px;
+    font-size: 18px;
+}
 
-    .detail-description p {
-        line-height: 1.7;
-        color: var(--text-secondary);
-    }
+.detail-description p {
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
 
 .detail-tags {
     margin-bottom: 32px;
@@ -1204,9 +714,9 @@ select, .icon-btn {
     transition: var(--transition);
 }
 
-    .back-btn:hover {
-        background: var(--accent-primary);
-    }
+.back-btn:hover {
+    background: var(--accent-primary);
+}
 
 /* ============ BUTTONS ============ */
 .btn-primary {
@@ -1220,10 +730,10 @@ select, .icon-btn {
     transition: var(--transition);
 }
 
-    .btn-primary:hover {
-        transform: scale(1.03);
-        box-shadow: 0 0 20px var(--accent-glow);
-    }
+.btn-primary:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px var(--accent-glow);
+}
 
 .btn-secondary {
     background: transparent;
@@ -1235,9 +745,9 @@ select, .icon-btn {
     transition: var(--transition);
 }
 
-    .btn-secondary:hover {
-        border-color: var(--accent-primary);
-    }
+.btn-secondary:hover {
+    border-color: var(--accent-primary);
+}
 
 /* ============ MODAL ============ */
 .modal {
@@ -1257,10 +767,10 @@ select, .icon-btn {
     transition: var(--transition);
 }
 
-    .modal.active {
-        opacity: 1;
-        visibility: visible;
-    }
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
 
 .modal-content {
     background: var(--bg-secondary);
@@ -1289,31 +799,11 @@ select, .icon-btn {
     color: var(--text-secondary);
 }
 
-.modal-icon {
-    font-size: 48px;
-    margin-bottom: 16px;
-}
-
 .modal-actions {
     display: flex;
     gap: 12px;
     justify-content: center;
     margin-top: 24px;
-}
-
-/* ============ REWARD MODAL ============ */
-.reward-modal .ad-preview img {
-    width: 100%;
-    border-radius: 16px;
-    margin: 16px 0;
-    max-height: 200px;
-    object-fit: cover;
-}
-
-.reward-timer {
-    font-size: 14px;
-    color: var(--text-secondary);
-    margin: 16px 0;
 }
 
 /* ============ LOADING SPINNER ============ */
@@ -1335,9 +825,7 @@ select, .icon-btn {
 }
 
 @keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
+    to { transform: rotate(360deg); }
 }
 
 /* ============ TOAST NOTIFICATION ============ */
@@ -1348,7 +836,7 @@ select, .icon-btn {
     background: var(--bg-secondary);
     border-left: 4px solid var(--accent-primary);
     color: var(--text-primary);
-    padding: 14px 24px;
+    padding: 12px 24px;
     border-radius: 12px;
     z-index: 10000;
     animation: slideInRight 0.3s ease;
@@ -1356,35 +844,18 @@ select, .icon-btn {
     display: flex;
     align-items: center;
     gap: 12px;
+    font-size: 14px;
 }
 
 @keyframes slideInRight {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
 }
 
-.toast-success {
-    border-left-color: var(--success);
-}
-
-.toast-error {
-    border-left-color: var(--error);
-}
-
-.toast-warning {
-    border-left-color: var(--warning);
-}
-
-.toast-info {
-    border-left-color: var(--info);
-}
+.toast-success { border-left-color: var(--success); }
+.toast-error { border-left-color: var(--error); }
+.toast-warning { border-left-color: var(--warning); }
+.toast-info { border-left-color: var(--info); }
 
 /* ============ SCROLL TOP BUTTON ============ */
 .scroll-top {
@@ -1405,14 +876,14 @@ select, .icon-btn {
     font-size: 20px;
 }
 
-    .scroll-top.visible {
-        opacity: 1;
-        visibility: visible;
-    }
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
 
-    .scroll-top:hover {
-        transform: scale(1.1);
-    }
+.scroll-top:hover {
+    transform: scale(1.1);
+}
 
 /* ============ SKELETON LOADING ============ */
 .skeleton-card {
@@ -1437,48 +908,27 @@ select, .icon-btn {
     border-radius: 6px;
 }
 
-    .skeleton-text.short {
-        width: 60%;
-    }
-
-    .skeleton-text.medium {
-        width: 80%;
-    }
-
 @keyframes shimmer {
-    0% {
-        background-position: 200% 0;
-    }
-
-    100% {
-        background-position: -200% 0;
-    }
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
 }
 
 /* ============ ANIMATIONS ============ */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .fade-in {
     animation: fadeIn 0.5s ease;
 }
 
-/* ============ RESPONSIVE DESIGN ============ */
+/* ============ RESPONSIVE - MOBILE FRIENDLY ============ */
 @media (max-width: 1024px) {
-    .hero-title {
-        font-size: 44px;
+    .app-container {
+        padding: 20px;
     }
-
-    .detail-overlay h1 {
+    .hero-title {
         font-size: 36px;
     }
 }
@@ -1486,84 +936,226 @@ select, .icon-btn {
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
-        padding: 16px 20px;
+        padding: 12px 16px;
     }
-
-    .nav-controls {
+    
+    .logo {
+        width: 100%;
         justify-content: center;
+    }
+    
+    .nav-controls {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .search-wrapper {
+        width: 100%;
+        order: -1;
+        margin-bottom: 4px;
+    }
+    
+    #searchInput {
         width: 100%;
     }
-
-    .app-container {
-        padding: 20px;
+    
+    #searchInput:focus {
+        width: 100%;
     }
-
+    
+    select, .icon-btn, .theme-btn, .favorites-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    
     .hero-banner {
-        padding: 40px 20px;
+        padding: 30px 20px;
+        margin-bottom: 24px;
     }
-
+    
     .hero-title {
-        font-size: 32px;
+        font-size: 28px;
     }
-
+    
     .hero-subtitle {
         font-size: 14px;
     }
-
+    
     .section-title {
         font-size: 20px;
     }
-
+    
+    .scroll-row .game-card {
+        min-width: 180px;
+    }
+    
+    .card-media {
+        height: 120px;
+    }
+    
     .games-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
         gap: 16px;
     }
-
-    .scroll-row .game-card {
-        min-width: 200px;
-    }
-
+    
     .detail-hero {
-        height: 45vh;
+        height: 40vh;
     }
-
+    
+    .detail-overlay h1 {
+        font-size: 28px;
+    }
+    
     .detail-overlay {
         padding: 30px;
     }
-
-        .detail-overlay h1 {
-            font-size: 24px;
-        }
-
+    
     .detail-stats {
         grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 16px;
+    }
+    
+    .stat-value {
+        font-size: 22px;
     }
 }
 
 @media (max-width: 480px) {
+    .app-container {
+        padding: 12px;
+    }
+    
+    .hero-title {
+        font-size: 24px;
+    }
+    
+    .hero-subtitle {
+        font-size: 12px;
+    }
+    
+    .scroll-row .game-card {
+        min-width: 150px;
+    }
+    
+    .card-media {
+        height: 100px;
+    }
+    
     .games-grid {
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 12px;
     }
-
-    .scroll-row .game-card {
-        min-width: 160px;
+    
+    .card-title {
+        font-size: 12px;
     }
-
-    .card-media {
-        height: 120px;
+    
+    .card-description {
+        font-size: 10px;
     }
-
-    .detail-hero {
-        height: 35vh;
+    
+    .detail-overlay h1 {
+        font-size: 22px;
     }
-
+    
     .detail-actions {
         flex-direction: column;
     }
-
-    .btn-primary, .btn-secondary {
+    
+    .detail-actions .btn-primary,
+    .detail-actions .btn-secondary {
         width: 100%;
         text-align: center;
+    }
+    
+    .comment-input-wrapper {
+        flex-direction: column;
+    }
+    
+    .toast {
+        bottom: 12px;
+        right: 12px;
+        left: 12px;
+        font-size: 12px;
+        text-align: center;
+    }
+    
+    .scroll-top {
+        width: 40px;
+        height: 40px;
+        bottom: 12px;
+        right: 12px;
+        font-size: 16px;
+    }
+}
+
+/* Landscape Mode */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero-banner {
+        padding: 20px;
+    }
+    
+    .hero-title {
+        font-size: 24px;
+    }
+    
+    .detail-hero {
+        height: 50vh;
+    }
+    
+    .scroll-row .game-card {
+        min-width: 160px;
+    }
+}
+
+/* Touch-friendly */
+@media (max-width: 768px) {
+    button, .game-card, .tag, .scroll-btn {
+        cursor: pointer;
+    }
+    
+    .game-card:hover {
+        transform: none;
+    }
+    
+    .game-card:active {
+        transform: scale(0.98);
+    }
+    
+    button:active {
+        transform: scale(0.96);
+    }
+    
+    .scroll-row {
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+    }
+    
+    .scroll-row .game-card {
+        scroll-snap-align: start;
+    }
+    
+    input, select, textarea {
+        font-size: 16px;
+    }
+}
+
+/* Safe area for notched phones */
+@supports (padding: max(0px)) {
+    .navbar {
+        padding-left: max(12px, env(safe-area-inset-left));
+        padding-right: max(12px, env(safe-area-inset-right));
+    }
+    
+    .app-container {
+        padding-left: max(12px, env(safe-area-inset-left));
+        padding-right: max(12px, env(safe-area-inset-right));
+    }
+    
+    .toast {
+        bottom: max(12px, env(safe-area-inset-bottom));
+        right: max(12px, env(safe-area-inset-right));
+        left: max(12px, env(safe-area-inset-left));
     }
 }
