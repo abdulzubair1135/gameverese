@@ -21,7 +21,468 @@
     --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
     --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.4);
 }
+/* ============ MOBILE FRIENDLY STYLES ============ */
 
+/* Mobile First Approach - Default for mobile */
+@media (max-width: 768px) {
+    /* Navbar - Stack vertically */
+    .navbar {
+        flex-direction: column;
+        padding: 12px 16px;
+        gap: 12px;
+    }
+    
+    .logo {
+        justify-content: center;
+    }
+    
+    .logo-icon {
+        font-size: 24px;
+    }
+    
+    .logo-text {
+        font-size: 20px;
+    }
+    
+    .nav-controls {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    #searchInput {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    #searchInput:focus {
+        width: 100%;
+    }
+    
+    select, .icon-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    
+    /* App Container */
+    .app-container {
+        padding: 16px;
+    }
+    
+    /* Hero Banner */
+    .hero-banner {
+        padding: 30px 20px;
+        margin-bottom: 30px;
+    }
+    
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .hero-subtitle {
+        font-size: 14px;
+    }
+    
+    .hero-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    /* Section Header */
+    .section-header {
+        margin: 25px 0 15px;
+    }
+    
+    .section-title {
+        font-size: 18px;
+    }
+    
+    .scroll-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+    
+    /* Scroll Row */
+    .scroll-row {
+        gap: 12px;
+        padding-bottom: 12px;
+    }
+    
+    .scroll-row .game-card {
+        min-width: 160px;
+    }
+    
+    /* Game Card */
+    .game-card {
+        border-radius: 12px;
+    }
+    
+    .card-media {
+        height: 110px;
+    }
+    
+    .card-content {
+        padding: 10px;
+    }
+    
+    .card-title {
+        font-size: 13px;
+    }
+    
+    .card-description {
+        font-size: 11px;
+        -webkit-line-clamp: 2;
+    }
+    
+    .card-stats {
+        font-size: 10px;
+        gap: 8px;
+    }
+    
+    .card-tags {
+        gap: 4px;
+    }
+    
+    .tag {
+        padding: 2px 6px;
+        font-size: 9px;
+    }
+    
+    .card-category-badge {
+        font-size: 9px;
+        padding: 3px 8px;
+        bottom: 8px;
+        left: 8px;
+    }
+    
+    .card-action-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+    
+    /* Games Grid */
+    .games-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 12px;
+    }
+    
+    /* Detail Page */
+    .detail-hero {
+        height: 35vh;
+        border-radius: 16px;
+    }
+    
+    .detail-overlay {
+        padding: 20px;
+    }
+    
+    .detail-overlay h1 {
+        font-size: 20px;
+    }
+    
+    .detail-actions {
+        gap: 10px;
+        margin-top: 12px;
+    }
+    
+    .btn-primary, .btn-secondary {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+    
+    .detail-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 16px;
+    }
+    
+    .stat-value {
+        font-size: 20px;
+    }
+    
+    .stat-label {
+        font-size: 10px;
+    }
+    
+    .detail-description h3 {
+        font-size: 16px;
+    }
+    
+    .detail-description p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+    
+    .detail-tags h3 {
+        font-size: 16px;
+    }
+    
+    /* Comments Section */
+    .comments-section {
+        padding: 16px;
+    }
+    
+    .comments-section h3 {
+        font-size: 16px;
+    }
+    
+    .comment-input-wrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .comment-input {
+        width: 100%;
+    }
+    
+    .comment-author strong {
+        font-size: 12px;
+    }
+    
+    .comment-text {
+        font-size: 12px;
+    }
+    
+    .reply-btn, .like-comment-btn {
+        font-size: 11px;
+    }
+    
+    .reply-input-wrapper {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .reply-input {
+        width: 100%;
+    }
+    
+    /* Back Button */
+    .back-btn {
+        padding: 8px 16px;
+        font-size: 12px;
+        margin-bottom: 16px;
+    }
+    
+    /* Similar Games */
+    .similar-games h3 {
+        font-size: 16px;
+    }
+    
+    /* Toast */
+    .toast {
+        bottom: 16px;
+        right: 16px;
+        left: 16px;
+        padding: 10px 16px;
+        font-size: 12px;
+        text-align: center;
+    }
+    
+    /* Scroll Top Button */
+    .scroll-top {
+        width: 40px;
+        height: 40px;
+        bottom: 16px;
+        right: 16px;
+        font-size: 16px;
+    }
+    
+    /* Modal */
+    .modal-content {
+        padding: 24px;
+        width: 85%;
+    }
+    
+    .modal-content h3 {
+        font-size: 18px;
+    }
+    
+    .modal-content p {
+        font-size: 13px;
+    }
+    
+    /* Ad Cards */
+    .ad-card .card-title {
+        font-size: 12px;
+    }
+    
+    .btn-ad {
+        padding: 4px 10px;
+        font-size: 10px;
+    }
+    
+    /* Skeleton */
+    .skeleton-image {
+        height: 110px;
+    }
+    
+    .skeleton-text {
+        height: 10px;
+        margin: 8px;
+    }
+}
+
+/* Small Mobile (480px and below) */
+@media (max-width: 480px) {
+    .app-container {
+        padding: 12px;
+    }
+    
+    .hero-title {
+        font-size: 22px;
+    }
+    
+    .hero-subtitle {
+        font-size: 12px;
+    }
+    
+    .hero-btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+    
+    .section-title {
+        font-size: 16px;
+    }
+    
+    .games-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 10px;
+    }
+    
+    .scroll-row .game-card {
+        min-width: 130px;
+    }
+    
+    .card-media {
+        height: 95px;
+    }
+    
+    .card-title {
+        font-size: 12px;
+    }
+    
+    .card-description {
+        font-size: 10px;
+    }
+    
+    .card-stats {
+        font-size: 9px;
+    }
+    
+    .detail-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 12px;
+    }
+    
+    .stat-value {
+        font-size: 18px;
+    }
+    
+    .detail-overlay h1 {
+        font-size: 18px;
+    }
+    
+    .detail-actions {
+        flex-direction: column;
+    }
+    
+    .detail-actions .btn-primary,
+    .detail-actions .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .tag {
+        padding: 2px 5px;
+        font-size: 8px;
+    }
+}
+
+/* Landscape Mode for Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero-banner {
+        padding: 20px;
+    }
+    
+    .hero-title {
+        font-size: 24px;
+    }
+    
+    .detail-hero {
+        height: 45vh;
+    }
+    
+    .scroll-row .game-card {
+        min-width: 140px;
+    }
+    
+    .card-media {
+        height: 90px;
+    }
+}
+
+/* Touch-friendly improvements */
+@media (max-width: 768px) {
+    /* Increase touch targets */
+    button, 
+    .game-card,
+    .tag,
+    .scroll-btn,
+    .fav-btn,
+    .share-btn,
+    .reply-btn,
+    .like-comment-btn,
+    .submit-reply-btn {
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    /* Remove hover effects on touch devices */
+    .game-card:hover {
+        transform: none;
+    }
+    
+    .game-card:active {
+        transform: scale(0.98);
+        transition: transform 0.1s;
+    }
+    
+    button:active,
+    .btn-primary:active,
+    .btn-secondary:active {
+        transform: scale(0.96);
+    }
+    
+    /* Better scrolling */
+    .scroll-row {
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+    }
+    
+    .scroll-row .game-card {
+        scroll-snap-align: start;
+    }
+    
+    /* Better input for mobile */
+    input, select, textarea {
+        font-size: 16px; /* Prevents zoom on focus in iOS */
+    }
+    
+    /* Better modal on mobile */
+    .modal {
+        padding: 16px;
+    }
+    
+    .modal-content {
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+}
 /* ============ LIGHT THEME ============ */
 body.light {
     --bg-primary: #f5f5f5;
