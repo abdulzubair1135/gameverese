@@ -3,51 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>GameHub | Premium Gaming Platform</title>
+    <title>GameVerse | Ultimate Gaming Platform</title>
 
-    <meta name="description" content="GameHub - Play trending, viral, and premium games online">
-    <meta name="theme-color" content="#0f172a">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="GameVerse - Play trending, viral, and premium games online. Free browser games with no download required.">
+    <meta name="keywords" content="free games, online games, play games, gaming platform, browser games, trending games">
+    <meta name="author" content="GameVerse">
+    <meta name="theme-color" content="#0a0a0a">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="GameVerse - Ultimate Gaming Platform">
+    <meta property="og:description" content="Play trending games online for free! No download required.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/assets/og-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GameVerse - Ultimate Gaming Platform">
+    <meta name="twitter:description" content="Play trending games online for free!">
+
+    <!-- PWA -->
     <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/icon-192.png">
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ui-enhancements.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- Progress Bar -->
+    <div id="progressBar" class="progress-bar"></div>
+
+    <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="logo">
             <span class="logo-icon">🎮</span>
-            <span class="logo-text">GameHub</span>
+            <span class="logo-text">GameVerse</span>
         </div>
-
         <div class="nav-controls">
-            <div class="search-container">
-                <input type="text" id="searchInput" placeholder="🔍 Search games..." aria-label="Search games">
+            <div class="search-wrapper">
+                <input type="text" id="searchInput" placeholder="Search games..." autocomplete="off">
                 <div id="searchSuggestions" class="search-suggestions"></div>
             </div>
-
-            <select id="sortSelect" class="sort-select">
+            <select id="sortSelect">
                 <option value="default">📋 Default</option>
                 <option value="trending">🔥 Trending</option>
                 <option value="likes">⭐ Most Liked</option>
                 <option value="views">👁 Most Viewed</option>
-                <option value="recent">🆕 Recent</option>
             </select>
-
-            <select id="categoryFilter" class="category-select">
+            <select id="categorySelect">
                 <option value="all">🎮 All Games</option>
-                <option value="action">🎬 Action</option>
                 <option value="racing">🏎 Racing</option>
                 <option value="fps">🔫 FPS</option>
-                <option value="casual">🎯 Casual</option>
-                <option value="adventure">🗺 Adventure</option>
+                <option value="action">⚔️ Action</option>
+                <option value="rpg">🗡️ RPG</option>
+                <option value="battle-royale">🏆 Battle Royale</option>
             </select>
-
-            <button id="themeToggle" class="theme-btn">🌙</button>
-            <button id="favoritesBtn" class="favorites-btn">❤️ <span id="favCount">0</span></button>
+            <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+            <button id="cyberpunkToggle" class="icon-btn" aria-label="Cyberpunk mode">💜</button>
+            <button id="favoritesBtn" class="icon-btn">❤️ <span id="favCount">0</span></button>
         </div>
     </nav>
 
-    <div id="progressBar" class="progress-bar"></div>
-
+    <!-- Main App Container -->
     <main id="app" class="app-container">
         <div id="loadingSpinner" class="loading-spinner">
             <div class="spinner"></div>
@@ -55,44 +81,48 @@
         </div>
     </main>
 
-    <button id="scrollTopBtn" class="scroll-top">⬆</button>
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top" aria-label="Scroll to top">↑</button>
 
-    <!-- Cookie Modal -->
+    <!-- Cookie Consent Modal -->
     <div id="cookieModal" class="modal">
         <div class="modal-content">
-            <div class="modal-header">
-                <span class="modal-icon">🍪</span>
-                <h3>Cookie Preferences</h3>
-            </div>
-            <p>We use cookies to enhance your gaming experience.</p>
+            <div class="modal-icon">🍪</div>
+            <h3>Cookie Preferences</h3>
+            <p>We use cookies to enhance your gaming experience, analyze traffic, and personalize content.</p>
             <div class="modal-actions">
-                <button id="acceptCookiesBtn" class="btn-primary">Accept</button>
-                <button id="rejectCookiesBtn" class="btn-secondary">Reject</button>
+                <button id="acceptCookies" class="btn-primary">Accept All</button>
+                <button id="rejectCookies" class="btn-secondary">Reject</button>
             </div>
         </div>
     </div>
 
-    <!-- Ad Popup -->
+    <!-- Ad Popup Modal -->
     <div id="adPopup" class="modal ad-popup">
         <div class="modal-content">
-            <img id="popupAdImage" src="" alt="Advertisement" style="width:100%;border-radius:12px">
-            <p id="popupAdDesc" style="margin:12px 0"></p>
-            <a id="popupAdLink" href="#" target="_blank" class="btn-primary">Learn More</a>
-            <button id="closeAdPopupBtn" class="btn-secondary" style="margin-top:10px">Continue to Game</button>
+            <button id="closeAdPopup" class="modal-close">&times;</button>
+            <img id="popupAdImage" src="" alt="Advertisement">
+            <p id="popupAdDesc"></p>
+            <a id="popupAdLink" href="#" target="_blank" rel="sponsored nofollow" class="btn-primary">Learn More</a>
+            <button id="continueGameBtn" class="btn-secondary">Continue to Game</button>
         </div>
     </div>
 
-    <!-- Security Modal -->
-    <div id="securityModal" class="modal">
-        <div class="modal-content" style="text-align:center">
-            <div style="font-size:50px">😢</div>
-            <h3>Why you spying bro?</h3>
-            <p>Just enjoy the games like a normal person! 🎮</p>
-            <button id="closeSecurityBtn" class="btn-primary">I'll behave 🙏</button>
+    <!-- Reward Ad Modal -->
+    <div id="rewardAdModal" class="modal reward-modal">
+        <div class="modal-content">
+            <h3>🎁 Watch Ad to Unlock</h3>
+            <p>Watch this short ad to continue playing</p>
+            <div class="ad-preview">
+                <img id="rewardAdImage" src="" alt="Advertisement">
+            </div>
+            <div class="reward-timer">Ad starts in 3 seconds...</div>
+            <button id="watchAdBtn" class="btn-primary" disabled>Watch Ad (3s)</button>
+            <button id="cancelRewardBtn" class="btn-secondary">Cancel</button>
         </div>
     </div>
 
-    <!-- JavaScript -->
+    <!-- JavaScript Modules -->
     <script src="js/utils.js"></script>
     <script src="js/storage.js"></script>
     <script src="js/api.js"></script>

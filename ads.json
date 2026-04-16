@@ -1,14 +1,46 @@
 ﻿[
   {
     "id": "ad1",
-    "image": "https://picsum.photos/id/0/400/300",
+    "type": "banner",
+    "image": "https://picsum.photos/id/0/400/200",
     "desc": "🔥 Limited Time: 50% Off Gaming Peripherals! Click now.",
-    "link": "https://example.com/gaming-deal"
+    "link": "https://example.com/gaming-deal",
+    "cpc": 0.50
   },
   {
     "id": "ad2",
-    "image": "https://picsum.photos/id/1/400/300",
+    "type": "banner",
+    "image": "https://picsum.photos/id/1/400/200",
     "desc": "⚡ New Gaming Laptop - RTX 4080. Ultra performance!",
-    "link": "https://example.com/gaming-laptop"
-  }
-]
+    "link": "https://example.com/gaming-laptop",
+    "cpc": 0.75
+  },
+  {
+    "id": "ad3",
+    "type": "popup",
+    "image": "https://picsum.photos/id/2/400/300",
+    "desc": "🎧 Premium Gaming Headset - 40% OFF! Limited stock.",
+    "link": "https://example.com/headset",
+    "cpc": 0.60
+  },
+  {
+    "id": "ad4",
+    "type": "reward",
+    "image": "https://picsum.photos/id/3/400/300",
+    "desc": "🎁 Watch this ad to earn 50 reward points!",
+    "link": "https://example.com/reward",
+    "cpc": 0.40
+  },
+  {
+    "id": "ad5",
+    "type": "banner",
+    "image": "https://picsum.photos/id/4/400/200",
+    "desc": "🖱️ RGB Gaming Mouse - 16000 DPI. Pro performance!",
+    "link": "https://example.com/mouse",
+    "cpc": 0.55
+  },
+  {
+    "id": "ad6",
+    "type": "popup",
+    "image": "https://picsum.photos/id/5/400/300",
+    "desc": "⌨️ Mechanical Gaming Keyboard - RGB, 
