@@ -1,68 +1,68 @@
-﻿[
+[
   {
     "id": "1",
-    "name": "🔥 Speed Demon Racing",
-    "desc": "Ultimate racing experience with insane speeds!",
-    "longDesc": "Speed Demon Racing is an adrenaline-pumping racing game. Master drifting, use nitro strategically, and unlock 50+ high-performance cars.",
+    "name": "🏎 Asphalt 9: Legends",
+    "desc": "High-speed arcade racing with stunning graphics",
+    "longDesc": "Race real hypercars from Ferrari, Porsche, and Lamborghini in Asphalt 9. Perform stunts, drift, and compete online.",
     "category": "racing",
-    "tags": [ "racing", "cars", "speed" ],
-    "image": "https://picsum.photos/id/104/400/300",
-    "downloadLink": "https://example.com/download/speed-racer.apk",
-    "date": "2024-01-15"
+    "tags": ["racing", "cars", "multiplayer"],
+    "image": "https://upload.wikimedia.org/wikipedia/en/8/8e/Asphalt_9_Legends_cover.jpg",
+    "downloadLink": "https://play.google.com/store/apps/details?id=com.gameloft.android.ANMP.GloftA9HM",
+    "date": "2018-07-25"
   },
   {
     "id": "2",
-    "name": "💥 Combat Arena FPS",
-    "desc": "Intense first-person shooter with tactical gameplay",
-    "longDesc": "Step into the battlefield with Combat Arena FPS. Choose classes, customize weapons, fight in 5v5 matches.",
+    "name": "🔫 Call of Duty: Mobile",
+    "desc": "Legendary FPS with multiplayer and battle royale",
+    "longDesc": "Experience classic COD maps, 5v5 multiplayer, zombies mode, and battle royale in one of the best FPS mobile games.",
     "category": "fps",
-    "tags": [ "fps", "shooter", "action" ],
-    "image": "https://picsum.photos/id/106/400/300",
-    "downloadLink": "https://example.com/download/combat-arena.apk",
-    "date": "2024-01-20"
+    "tags": ["fps", "shooter", "action"],
+    "image": "https://upload.wikimedia.org/wikipedia/en/1/1f/Call_of_Duty_Mobile.jpg",
+    "downloadLink": "https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter",
+    "date": "2019-10-01"
   },
   {
     "id": "3",
-    "name": "🎯 Archery Master",
-    "desc": "Precision archery game with stunning environments",
-    "longDesc": "Test your aiming skills in Archery Master. Shoot arrows across beautiful landscapes.",
+    "name": "🏹 Archery King",
+    "desc": "Competitive archery with real-time multiplayer",
+    "longDesc": "Challenge players worldwide in archery matches. Upgrade your bows and master precision shooting.",
     "category": "casual",
-    "tags": [ "archery", "casual" ],
-    "image": "https://picsum.photos/id/26/400/300",
-    "downloadLink": "https://example.com/download/archery-master.apk",
-    "date": "2024-01-10"
+    "tags": ["archery", "casual"],
+    "image": "https://upload.wikimedia.org/wikipedia/en/6/6a/Archery_King.jpg",
+    "downloadLink": "https://play.google.com/store/apps/details?id=com.miniclip.archery",
+    "date": "2016-10-18"
   },
   {
     "id": "4",
-    "name": "🗺 Epic Quest RPG",
-    "desc": "Embark on an epic journey in this fantasy RPG",
-    "longDesc": "Enter a world of magic and monsters in Epic Quest RPG. Create your hero, complete hundreds of quests.",
+    "name": "🗺 Genshin Impact",
+    "desc": "Open-world RPG with stunning visuals",
+    "longDesc": "Explore the vast world of Teyvat, fight enemies, and unlock characters in this highly popular RPG adventure.",
     "category": "adventure",
-    "tags": [ "rpg", "fantasy", "adventure" ],
-    "image": "https://picsum.photos/id/169/400/300",
-    "downloadLink": "https://example.com/download/epic-quest.apk",
-    "date": "2024-01-18"
+    "tags": ["rpg", "fantasy", "open-world"],
+    "image": "https://upload.wikimedia.org/wikipedia/en/5/5d/Genshin_Impact_cover.jpg",
+    "downloadLink": "https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact",
+    "date": "2020-09-28"
   },
   {
     "id": "5",
-    "name": "👊 Street Brawler",
-    "desc": "Classic fighting game with unique characters",
-    "longDesc": "Choose your fighter and unleash devastating combos in Street Brawler. Master the art of combat.",
+    "name": "👊 Shadow Fight 3",
+    "desc": "Realistic fighting game with RPG elements",
+    "longDesc": "Fight using martial arts, weapons, and shadow abilities. Customize your hero and defeat powerful enemies.",
     "category": "action",
-    "tags": [ "fighting", "action" ],
-    "image": "https://picsum.photos/id/155/400/300",
-    "downloadLink": "https://example.com/download/street-brawler.apk",
-    "date": "2024-01-12"
+    "tags": ["fighting", "action"],
+    "image": "https://upload.wikimedia.org/wikipedia/en/4/4d/Shadow_Fight_3_cover.jpg",
+    "downloadLink": "https://play.google.com/store/apps/details?id=com.nekki.shadowfight3",
+    "date": "2017-11-16"
   },
   {
     "id": "6",
-    "name": "🚁 Sky Wings",
-    "desc": "Soar through the skies in this thrilling flight simulator",
-    "longDesc": "Experience the thrill of flight in Sky Wings. Pilot various aircraft, complete missions.",
-    "category": "casual",
-    "tags": [ "flight", "simulator" ],
-    "image": "https://picsum.photos/id/96/400/300",
-    "downloadLink": "https://example.com/download/sky-wings.apk",
-    "date": "2024-01-08"
+    "name": "🚁 Infinite Flight Simulator",
+    "desc": "Advanced flight simulation experience",
+    "longDesc": "Fly aircraft across the world with realistic controls, live weather, and multiplayer air traffic.",
+    "category": "simulation",
+    "tags": ["flight", "simulator"],
+    "image": "https://upload.wikimedia.org/wikipedia/en/2/2f/Infinite_Flight.jpg",
+    "downloadLink": "https://play.google.com/store/apps/details?id=com.fds.infiniteflight",
+    "date": "2012-04-25"
   }
 ]
