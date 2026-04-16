@@ -1,11 +1,10 @@
-﻿// ============ UI MODULE ============
+// ============ UI MODULE ============
 
 let allGamesData = [];
 let currentPage = 'home';
 
 /**
  * Show/hide loading spinner
- * @param {boolean} show - Show or hide
  */
 function showLoading(show) {
     const spinner = document.getElementById('loadingSpinner');
@@ -35,8 +34,6 @@ function showSkeleton() {
 
 /**
  * Render a single game card
- * @param {Object} game - Game object
- * @returns {string} HTML string
  */
 function renderGameCard(game) {
     const likes = getGameLikes(game.id);
@@ -224,7 +221,6 @@ async function renderHome() {
 
 /**
  * Render game detail page
- * @param {string} gameId - Game ID
  */
 async function renderDetail(gameId) {
     console.log('🎮 Rendering Detail for:', gameId);
@@ -337,9 +333,6 @@ async function renderDetail(gameId) {
 
 /**
  * Render comments with replies
- * @param {Array} comments - Comments array
- * @param {string} gameId - Game ID
- * @returns {string} HTML string
  */
 function renderComments(comments, gameId) {
     if (!comments.length) {
@@ -406,17 +399,7 @@ function attachCardEvents() {
                 });
             }
         });
-        // Add touch feedback for mobile
-if ('ontouchstart' in window) {
-    document.querySelectorAll('.game-card, .btn-primary, .btn-secondary, .scroll-btn').forEach(el => {
-        el.addEventListener('touchstart', function() {
-            this.style.transform = 'scale(0.98)';
-        });
-        el.addEventListener('touchend', function() {
-            this.style.transform = '';
-        });
-    });
-}
+        
         newCard.addEventListener('click', (e) => {
             createRipple(e, newCard);
         });
@@ -465,8 +448,6 @@ if ('ontouchstart' in window) {
 
 /**
  * Animate button with class
- * @param {HTMLElement} btn - Button element
- * @param {string} animationClass - Animation class name
  */
 function animateButton(btn, animationClass) {
     btn.classList.add(animationClass);
@@ -475,7 +456,6 @@ function animateButton(btn, animationClass) {
 
 /**
  * Attach events to detail page
- * @param {string} gameId - Game ID
  */
 function attachDetailEvents(gameId) {
     // Favorite button
@@ -620,7 +600,6 @@ function attachDetailEvents(gameId) {
 
 /**
  * Filter games by tag
- * @param {string} tagName - Tag name
  */
 async function filterByTag(tagName) {
     showLoading(true);
@@ -652,8 +631,6 @@ async function filterByTag(tagName) {
 
 /**
  * Scroll horizontal row
- * @param {string} rowId - Row element ID
- * @param {string} direction - 'left' or 'right'
  */
 function scrollRow(rowId, direction) {
     const container = document.getElementById(rowId);
@@ -665,7 +642,6 @@ function scrollRow(rowId, direction) {
 
 /**
  * Open trailer modal
- * @param {string} url - YouTube embed URL
  */
 function openTrailer(url) {
     if (!url) {
@@ -687,8 +663,6 @@ function openTrailer(url) {
 
 /**
  * Show toast notification
- * @param {string} message - Message to show
- * @param {string} type - 'success', 'error', 'warning', 'info'
  */
 function showToast(message, type = 'info') {
     const toast = document.createElement('div');
@@ -707,7 +681,6 @@ function showToast(message, type = 'info') {
 
 /**
  * Render search results
- * @param {string} query - Search query
  */
 async function renderSearchResults(query) {
     if (!query.trim()) {
@@ -742,7 +715,6 @@ async function renderSearchResults(query) {
 
 /**
  * Render category filtered games
- * @param {string} category - Category name
  */
 async function renderCategoryFilter(category) {
     showLoading(true);
@@ -804,6 +776,41 @@ async function showFavorites() {
     attachCardEvents();
     showLoading(false);
 }
+
+// ============ MOBILE TOUCH FEEDBACK (ADD AFTER PAGE LOADS) ============
+function setupMobileTouchFeedback() {
+    if (!('ontouchstart' in window)) return;
+    
+    const touchElements = document.querySelectorAll('.game-card, .btn-primary, .btn-secondary, .scroll-btn, .back-btn, .fav-btn, .share-btn, .tag, .like-stat, .share-stat');
+    
+    touchElements.forEach(el => {
+        el.addEventListener('touchstart', function(e) {
+            if (e.target.closest('.fav-btn') || e.target.closest('.share-btn') || e.target.closest('.tag')) {
+                return;
+            }
+            this.style.transform = 'scale(0.97)';
+            this.style.transition = 'transform 0.1s ease';
+        });
+        
+        el.addEventListener('touchend', function() {
+            this.style.transform = '';
+            setTimeout(() => {
+                this.style.transition = '';
+            }, 100);
+        });
+        
+        el.addEventListener('touchcancel', function() {
+            this.style.transform = '';
+        });
+    });
+}
+
+// Override attachCardEvents to include touch feedback after rendering
+const originalAttachCardEvents = attachCardEvents;
+attachCardEvents = function() {
+    originalAttachCardEvents();
+    setupMobileTouchFeedback();
+};
 
 // Make functions global
 window.renderHome = renderHome;
