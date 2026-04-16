@@ -1,4 +1,4 @@
-﻿// UI MODULE
+// UI MODULE
 
 let allGamesData = [];
 
