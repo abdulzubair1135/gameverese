@@ -86,14 +86,24 @@ async function renderHome() {
   let html = `<div class="app-container fade">`;
   
   html += `
-    <div style="background: linear-gradient(135deg, #1e293b, #0f172a); border-radius: 24px; padding: 40px; text-align: center; margin-bottom: 32px;">
-      <h1 style="font-size: 2.5rem; margin-bottom: 12px;">🎮 Welcome to GameHub</h1>
-      <p style="font-size: 1.2rem; margin-bottom: 16px;">Discover the best premium games online</p>
-      <div style="display: flex; gap: 20px; justify-content: center;">
-        <span>👥 ${formatNumber(visitorCount)} Visitors</span>
-        <span>🎮 ${games.length}+ Games</span>
-      </div>
-    </div>
+    <div style="
+  background: radial-gradient(circle at top, #1f2937, #020617);
+  border-radius: 24px;
+  padding: 60px 20px;
+  text-align: center;
+  margin-bottom: 40px;
+  box-shadow: 0 0 40px rgba(139,92,246,0.4);
+">
+  <h1 style="font-size: 3rem; margin-bottom: 10px; color:#a78bfa;">
+    🚀 Welcome to GameVerse
+  </h1>
+  <p style="font-size: 1.2rem; color:#cbd5f5;">
+    Play. Explore. Dominate.
+  </p>
+  <button class="btn-primary" style="margin-top:20px;">
+    🎮 Explore Games
+  </button>
+</div>
   `;
   
   if (recommended.length) html += renderSection('🎯 Recommended For You', recommended);
@@ -274,7 +284,7 @@ if (installBtn) {
       const id = card.dataset.gameId;
       if (id) openGameWithAd(id);
     });
-  }); 
+  });
 }
 
 function showToast(message) {
@@ -293,9 +303,7 @@ function updateFavCount() {
 
 function openGameWithAd(gameId) {
   showAdPopup(() => {
-   window.location.hash = `game-${gameId}`;
-
-
+    window.location.hash = `game-${gameId}`;
     renderDetail(gameId);
   });
 }

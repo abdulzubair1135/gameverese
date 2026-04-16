@@ -171,27 +171,3 @@ window.searchByTag = async (tag) => {
 };
 
 document.addEventListener('DOMContentLoaded', initApp);
-
-// 🔥 PAGE LOAD HANDLE
-window.addEventListener('load', () => {
-  const hash = window.location.hash;
-
-  if (hash.startsWith('#game-')) {
-    const gameId = hash.replace('#game-', '');
-    renderDetail(gameId);
-  } else {
-    renderHome();
-  }
-});
-
-// 🔥 HASH CHANGE HANDLE
-window.addEventListener('hashchange', () => {
-  const hash = window.location.hash;
-
-  if (hash.startsWith('#game-')) {
-    const gameId = hash.replace('#game-', '');
-    renderDetail(gameId);
-  } else {
-    renderHome();
-  }
-});
