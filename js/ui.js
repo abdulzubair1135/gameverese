@@ -1,4 +1,4 @@
-// ============ UI MODULE ============
+// ============ UI MODULE - COMPLETE REWRITE ============
 
 let allGamesData = [];
 let currentPage = 'home';
@@ -112,6 +112,7 @@ async function renderHome() {
     
     let html = `<div class="fade-in">`;
     
+    // Hero Banner
     html += `
         <div class="hero-banner glass-card">
             <div class="hero-content">
@@ -124,6 +125,7 @@ async function renderHome() {
         </div>
     `;
     
+    // Trending Section
     if (trending.length) {
         html += `
             <div id="trendingSection">
@@ -142,6 +144,7 @@ async function renderHome() {
         `;
     }
     
+    // Recommended Section
     if (recommended.length) {
         html += `
             <div class="section-header">
@@ -157,6 +160,7 @@ async function renderHome() {
         `;
     }
     
+    // Most Liked Section
     if (mostLiked.length) {
         html += `
             <div class="section-header">
@@ -172,6 +176,7 @@ async function renderHome() {
         `;
     }
     
+    // Recently Played Section
     if (recentlyPlayed.length) {
         html += `
             <div class="section-header">
@@ -187,6 +192,7 @@ async function renderHome() {
         `;
     }
     
+    // Favorites Section
     if (favoriteGames.length) {
         html += `
             <div class="section-header">
@@ -202,6 +208,7 @@ async function renderHome() {
         `;
     }
     
+    // All Games Grid
     html += `
         <div class="section-header">
             <h2 class="section-title">🎮 All Games</h2>
@@ -776,41 +783,6 @@ async function showFavorites() {
     attachCardEvents();
     showLoading(false);
 }
-
-// ============ MOBILE TOUCH FEEDBACK (ADD AFTER PAGE LOADS) ============
-function setupMobileTouchFeedback() {
-    if (!('ontouchstart' in window)) return;
-    
-    const touchElements = document.querySelectorAll('.game-card, .btn-primary, .btn-secondary, .scroll-btn, .back-btn, .fav-btn, .share-btn, .tag, .like-stat, .share-stat');
-    
-    touchElements.forEach(el => {
-        el.addEventListener('touchstart', function(e) {
-            if (e.target.closest('.fav-btn') || e.target.closest('.share-btn') || e.target.closest('.tag')) {
-                return;
-            }
-            this.style.transform = 'scale(0.97)';
-            this.style.transition = 'transform 0.1s ease';
-        });
-        
-        el.addEventListener('touchend', function() {
-            this.style.transform = '';
-            setTimeout(() => {
-                this.style.transition = '';
-            }, 100);
-        });
-        
-        el.addEventListener('touchcancel', function() {
-            this.style.transform = '';
-        });
-    });
-}
-
-// Override attachCardEvents to include touch feedback after rendering
-const originalAttachCardEvents = attachCardEvents;
-attachCardEvents = function() {
-    originalAttachCardEvents();
-    setupMobileTouchFeedback();
-};
 
 // Make functions global
 window.renderHome = renderHome;
